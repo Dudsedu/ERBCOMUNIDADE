@@ -1,7 +1,2 @@
 streamlit
-pandas
-folium
-streamlit.components.v1
-os
 
-random
