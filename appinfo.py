@@ -13,9 +13,9 @@ st.set_page_config(
 # --------------------------
 # FUNÇÕES AUXILIARES
 # --------------------------
-#@st.cache_data
-#def carregar_dados():
-#    return pd.read_excel("Metadados_28_Infovias_modeladas.xlsx")
+@st.cache_data
+def carregar_dados():
+    return pd.read_excel("Metadados_28_Infovias_modeladas.xlsx")
 
 def exibir_tela_inicial():
     col1, col2, col3 = st.columns([1, 2, 1])
@@ -77,7 +77,7 @@ def exibir_mapa(df):
 # --------------------------
 # EXECUÇÃO
 # --------------------------
-#df = carregar_dados()
+df = carregar_dados()
 
 # Menu de navegação
 st.sidebar.title("📁 Navegação")
@@ -87,3 +87,4 @@ if pagina == "🏠 Início":
     exibir_tela_inicial()
 elif pagina == "🗺️ Mapa Interativo":
     exibir_mapa(df)
+
